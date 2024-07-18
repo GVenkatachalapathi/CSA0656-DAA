@@ -1,0 +1,23 @@
+#include<stdio.h>
+int printfibnoacci(int val)
+{
+	static int a=0,b=1,c;	
+	if(val>0)
+	{
+		c = a + b;
+		printf(" %d",c);
+		a = b;
+		b = c;
+		printfibnoacci(val-1);
+	}
+}
+int main()
+{
+	int value;
+	printf("Name :G Venkata Chalapathi\nReg no :192211150");
+	printf("\n\nEnter the value :");
+	scanf("%d",&value);
+	printf("Fibnoacci Series :");
+	printf("%d %d",0,1);
+	printfibnoacci(value-2);
+}
