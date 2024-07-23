@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int num1,num2;
+	printf("Name :G Venkata Chalapathi\nReg no :192211150");
+	printf("\n\nEnter any 2 numbers :");
+	scanf("%d",&num1);
+	scanf("%d",&num2);
+	
+	while(num2!=0)
+	{
+		int temp = num2;
+		num2 = num1 % num2;
+		num1 = temp;
+	}
+	printf("GCD of 2 numbers :%d",num1);
+}
