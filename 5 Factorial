@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int n,fact = 1,i;
+	printf("Name :G Venkata Chalapathi\nReg no :192211150");
+	printf("\n\nEnter any number :");
+	scanf("%d",&n);
+	for(i=n;i>0;i--)
+	{
+		fact *= i;
+	}
+	printf("Factorial of a number :%d",fact);
+}
