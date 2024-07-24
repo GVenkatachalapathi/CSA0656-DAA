@@ -1,0 +1,18 @@
+
+#include<stdio.h>
+int main()
+{
+	printf("Name :G Venkata Chalapathi\nReg no :192211150");
+	int n;
+	printf("\n\nEnter a number :");
+	scanf("%d",&n);
+	if( n==2 || n==3 || n==5 || n==7 || n==11 || n%2!=0 && n%3!=0 && n%5!=0 && n%7!=0 && n%11!=0 )
+	{
+		printf("prime");
+	}
+	else
+	{
+		printf("not prime");
+	}
+
+}
