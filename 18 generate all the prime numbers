@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+void sieveOfEratosthenes(int n) {
+    bool prime[n + 1];
+    int i,p;
+    for (i = 0; i <= n; i++)
+        prime[i] = true;
+
+    for ( p = 2; p * p <= n; p++) {
+        if (prime[p] == true) {
+            for (i = p * p; i <= n; i += p)
+                prime[i] = false;
+        }
+    }
+
+    for ( p = 2; p <= n; p++)
+        if (prime[p])
+            printf("%d ", p);
+    printf("\n");
+}
+
+int main() {
+    int n;
+    printf("G VENKATA CHALAPTAHI - 192211150\n");
+    printf("Enter the limit: ");
+    scanf("%d", &n);
+    printf("Prime numbers up to %d are:\n", n);
+    sieveOfEratosthenes(n);
+    return 0;
+}
